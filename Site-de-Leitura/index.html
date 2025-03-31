@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Site de Leitura</title>
+    </head>
+
+    <header>
+        <div class="h1">
+            <div>
+                <img class="logo" src="img/logo.png">
+            </div>
+            <div>
+                <h1 class="nomeSite" align="center">Site de Leitura</h1>
+            </div>
+        </div>
+       
+    
+        <div id="side-menu" class="side-nav">
+            <a href="#" class="btn-close" onClick="closeSlideMenu()">&times;</a>
+
+            <div style="display: flex; flex-direction: row;">
+                <div style="display: inline-block; width: auto;">
+                    <img id="capaLivro" class="capaLivro" src="../img/download.png">
+                    <p id="nomeLivro" align="center" class="capaLivro">Nome Livro</p>
+                    <div style="margin-top: -390px;" class="capaLivro" align="center">
+                        <a href="#" id="buttonLer" align="center" class="buttonLer">LER AGORA</a>
+                    </div>
+                </div>
+                <div class="resumoLivro" style="display: inline-block; width: 700px; top:0;">
+                    <h3>Resumo:</h3>
+                    <p id="textResume">.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="side-menu2" class="side-nav">
+            <a href="#" class="btn-close2" onClick="closeSlideMenu2()">&times;</a>
+
+            <div>
+                <div style=" align-items: center; display: flex;flex-direction: column; width: auto;">
+                    <p id="nomePoema" align="center" class="nomePoema">Nome Poema</p>
+                    <p id="textPoema" class="textPoema">.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+  
+    
+    
+    <body>
+        <div class="line"></div>
+        <div class="d1">
+            <h1 align="center">Livros Dísponiveis:</h1>
+        </div>
+
+        <div class="livros">
+            
+            <div class="livro">
+                <button id="1" onclick="SelectResume('l1')">
+                    <img src="img/livro1.webp">
+                    <h1>Eu Robô <br>Isaac Asimov</h1>
+                </button>
+            </div>
+            
+            <div class="livro">
+                <button id="2" onclick="SelectResume('l2')">
+                    <img src="img/livro2.webp">
+                    <h1>O Galinheiro<br>Amauricio Lopes</h1>
+                </button>
+            </div>
+            <div class="livro">
+                <button id="3" onclick="SelectResume('l3')">
+                    <img src="img/livro3.webp">
+                    <h1>Hype<br>Gabrielle Bluestone</h1>
+                </button>
+            </div>
+            <div class="livro">
+                <button id="4" onclick="SelectResume('l4')">
+                    <img src="img/livro4.webp">
+                    <h1>Dez dias num Hospício<br>Nellie Bly</h1>
+                </button>
+            </div>
+        </div> 
+        <div class="livros">
+            <div class="livro">
+                <button id="5" onclick="SelectResume('l5')">
+                    <img src="img/livro5.webp">
+                    <h1>Isso Nunca vai Funcionar<br>Marc Randolph</h1>
+                </button>
+            </div>
+            <div class="livro">
+                <button id="6" onclick="SelectResume('l6')">
+                    <img src="img/livro6.webp">
+                    <h1>Jogo dos Ladrões<br>Kayvion Lewis</h1>
+                </button>
+            </div>
+            <div class="livro">
+                <button id="7" onclick="SelectResume('l7')">
+                    <img src="img/livro7.webp">
+                    <h1>Harry Potter e o <br>Prisioneiro de Azkaban<br>J. K. Rowling</h1>
+                </button>
+            </div>
+            <div class="livro">
+                <button id="8" onclick="SelectResume('l8')">
+                    <img src="img/livro8.webp">
+                    <h1>Harry Potter e a <br>Câmara Secreta<br>J. K. Rowling</h1>
+                </button>
+            </div>
+        </div> 
+        
+
+        <div>
+            <div class="d1">
+                <h1 align="center">Poemas Dísponiveis:</h1>
+            </div>
+            <div class="poemas">
+                <button id="p1" class="buttonPoema" onclick="selectPoema('p1')">
+                    <div class="poema">
+                        <p>Poema: Soneto de Fidelidade<br>Autor: Vinicius de Moraes</p>
+                    </div>
+                </button>
+
+                <button id="p2" class="buttonPoema" onclick="selectPoema('p2')">
+                    <div class="poema">
+                        <p>Poema: Ora direis ouvir estrelas<br>Autor: Olavo Bilac</p>
+                    </div>
+                </button>
+            </div>
+
+            <div class="poemas">
+                <button id="p3" class="buttonPoema" onclick="selectPoema('p3')">
+                    <div class="poema">
+                        <p>Poema: Canção do Exílio<br>Autor: Gonçalves Dias</p>
+                    </div>
+                </button>
+                
+                <button id="p4" class="buttonPoema" onclick="selectPoema('p4')">
+                    <div class="poema">
+                        <p>Poema: Timidez <br>Autor: Cecília Meireles</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+    
+        <div class="d1">
+            <h1 align="center">Frases</h1>
+        </div>
+        <div id="posicaoAtual" name="0" class="divFrases">
+            <button class="buttonFrases" onclick="selecionarFrases(-1)"><img src="img/arrow-left.png"></button>
+            <div class="frase">
+                <p id="frase">O universo não seria grande coisa se não fosse o lar das pessoas que você ama.</p>
+            </div>
+            <button class="buttonFrases" onclick="selecionarFrases(1)"><img src="img/arrow-right.png"></button>
+        </div>
+    
+
+        
+        <footer>
+        </footer>
+        <script src="index.js"></script>
+    </body>
+</html>
